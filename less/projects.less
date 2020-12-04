@@ -1,0 +1,92 @@
+.projects {
+  &-header {
+    .font-mixin("Raleway", normal, 600);
+    font-size: 30px;
+    color: rgba(85, 85, 85, 1);
+    text-align: center;
+    margin: 81px 0 0;
+  }
+
+  &-text {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 16px;
+    color: rgba(140, 140, 140, 1);
+    text-align: center;
+    line-height: 28px;
+    margin: 24px 568px 0 581px;
+  }
+
+  &-list-one {
+    list-style-type: none;
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &-list-one-item {
+    margin: 0 10px 0 0;
+  }
+
+  &-list-one-item:last-child {
+    margin: 0;
+  }
+
+  &-list-button {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 14px;
+    color: rgba(140, 140, 140, 1);
+    text-align: center;
+    line-height: 21px;
+    padding: 5px 24px;
+    border: 1px solid rgba(235, 235, 235, 1);
+    background-color: #fff;
+    border-radius: 3px;
+
+    &:hover {
+      color: #fff;
+      background-color: @hover-color;
+    }
+
+    &:active {
+      background-color: lightgray;
+    }
+
+    &:focus {
+      outline: 0px;
+    }
+  }
+
+  &-list-two {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 42px 375px 0;
+    padding: 0;
+  }
+
+  &-list-two-item {
+    margin: 0 30px 30px 0;
+
+    //Временное решение с margin правой колонны и последнего ряда в списке
+    &:nth-child(3) {
+      margin: 0 0 10px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      margin: 0 30px 0 0;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &-more-button {
+    margin: 40px 0 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
