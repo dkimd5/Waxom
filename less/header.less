@@ -33,10 +33,26 @@
     width: 181px;
     text-decoration: none;
     margin: 0 0 0 376px;
+
+    &:hover > svg,
+    &:hover > span {
+      fill: @hover-color;
+      color: @hover-color;
+    }
+
+    &:active > svg,
+    &:active > span {
+      fill: @active-color;
+      color: @active-color;
+    }
+  }
+
+  &-logo-svg {
+    fill: rgba(255, 255, 255, 1);
   }
 
   &-logo-txt {
-    .font-mixin("Raleway"; normal; 400);
+    .font-mixin("Raleway", normal, 400);
     font-size: 34px;
     color: rgba(255, 255, 255, 1);
     text-align: right;
@@ -66,9 +82,17 @@
   &-link {
     text-decoration: none;
     display: block;
-    .font-mixin("Montserat"; normal; 300);
+    .font-mixin("Montserrat"; normal; 300);
     font-size: 14px;
     color: rgba(255, 255, 255, 1);
+
+    &:hover {
+      color: @hover-color;
+    }
+
+    &:active {
+      color: @active-color;
+    }
   }
 
   &-shop {
@@ -79,11 +103,11 @@
   }
 
   &-shop:hover {
-    fill: rgba(199, 178, 153, 1);
+    fill: @hover-color;
   }
 
   &-shop:active {
-    fill: rgb(81, 81, 202);
+    fill: @active-color;
   }
 
   &-search {
@@ -123,11 +147,11 @@
   }
 
   &-search-label:hover &-search-svg {
-    fill: #c7b299;
+    fill: @hover-color;
   }
 
   &-search-label:active &-search-svg {
-    fill: rgb(81, 81, 202);
+    fill: @active-color;
   }
 
   &-search-svg {
@@ -156,7 +180,7 @@
   }
 
   &-text {
-    .font-mixin("Montserat", normal, 300);
+    .font-mixin("Montserrat", normal, 300);
     color: rgba(255, 255, 255, 1);
     font-size: 16px;
     margin: 0 0 32px;

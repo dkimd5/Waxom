@@ -6,17 +6,13 @@
     list-style-type: none;
   }
 
-  &-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   &-link {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 49px;
+    text-decoration: none;
+    margin: 0 0 108px;
 
     &::after {
       content: "";
@@ -26,7 +22,30 @@
       background-color: rgba(241, 238, 233, 1);
       position: absolute;
       top: 209px;
-      left: -10px;
+      left: 111px;
+    }
+
+    &:hover svg {
+      fill: @hover-color;
+    }
+
+    &:active svg {
+      fill: @active-color;
+    }
+
+    &:hover h2 {
+      color: @hover-color;
+    }
+
+    &:active h2 {
+      color: @active-color;
+    }
+
+    &:hover:after {
+      background-color: @hover-color;
+    }
+    &:active:after {
+      background-color: @active-color;
     }
   }
 
@@ -44,7 +63,7 @@
 
   &-text {
     text-align: center;
-    .font-mixin("Montserat", normal, 300);
+    .font-mixin("Montserrat", normal, 300);
     font-size: 14px;
     color: rgba(140, 140, 140, 1);
     line-height: 24px;

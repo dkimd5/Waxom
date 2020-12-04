@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Montserat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/Montserrat-Regular.ttf);
 }
 @font-face {
-  font-family: "Montserat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 200;
   src: url(../fonts/Montserrat-ExtraLight.ttf);
 }
 @font-face {
-  font-family: "Montserat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
   src: url(../fonts/Montserrat-Light.ttf);
@@ -79,6 +79,19 @@
   text-decoration: none;
   margin: 0 0 0 376px;
 }
+.header-logo:hover > svg,
+.header-logo:hover > span {
+  fill: #c7b299;
+  color: #c7b299;
+}
+.header-logo:active > svg,
+.header-logo:active > span {
+  fill: #5151ca;
+  color: #5151ca;
+}
+.header-logo-svg {
+  fill: #ffffff;
+}
 .header-logo-txt {
   font-family: "Raleway";
   font-style: normal;
@@ -107,11 +120,17 @@
 .header-link {
   text-decoration: none;
   display: block;
-  font-family: "Montserat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   color: #ffffff;
+}
+.header-link:hover {
+  color: #c7b299;
+}
+.header-link:active {
+  color: #5151ca;
 }
 .header-shop {
   display: flex;
@@ -188,7 +207,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   margin: 0 0 19px;
 }
 .slider-text {
-  font-family: "Montserat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
   color: #ffffff;
@@ -215,16 +234,13 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   display: flex;
   list-style-type: none;
 }
-.sections-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .sections-link {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 49px;
+  text-decoration: none;
+  margin: 0 0 108px;
 }
 .sections-link::after {
   content: "";
@@ -234,7 +250,25 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: #f1eee9;
   position: absolute;
   top: 209px;
-  left: -10px;
+  left: 111px;
+}
+.sections-link:hover svg {
+  fill: #c7b299;
+}
+.sections-link:active svg {
+  fill: #5151ca;
+}
+.sections-link:hover h2 {
+  color: #c7b299;
+}
+.sections-link:active h2 {
+  color: #5151ca;
+}
+.sections-link:hover:after {
+  background-color: #c7b299;
+}
+.sections-link:active:after {
+  background-color: #5151ca;
 }
 .sections-item-svg {
   fill: #555555;
@@ -250,12 +284,85 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .sections-text {
   text-align: center;
-  font-family: "Montserat";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
   color: #8c8c8c;
   line-height: 24px;
   margin: 24px 0 0;
+}
+.ideas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fbfaf8;
+}
+.ideas-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #555555;
+  text-align: center;
+  margin: 83px 0 0;
+}
+.ideas-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #8c8c8c;
+  text-align: center;
+  line-height: 28px;
+  margin: 24px 570px 0;
+}
+.ideas-multi-bg {
+  margin: 40px 345px 0;
+  min-height: 482px;
+  background-image: url(../img/ideas-center.jpg), url(../img/ideas-left.jpg), url(../img/ideas-right.jpg);
+  min-width: 1204px;
+  background-repeat: no-repeat;
+  background-position: bottom center, bottom left, bottom right;
+}
+.aside {
+  background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+  display: flex;
+  padding: 48px 376px;
+}
+.aside-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+.aside-waxom-style {
+  color: #c7b299;
+}
+.aside-text {
+  margin: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: #615855;
+}
+.aside-link {
+  display: inline-block;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 23px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #998675;
+  padding: 19px 29px;
+  border-radius: 3px;
+  margin: 0 0 0 470px;
 }
 /*# sourceMappingURL=style.css.map */

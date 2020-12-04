@@ -1,0 +1,33 @@
+.ideas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(251, 250, 248, 1);
+
+  &-header {
+    .font-mixin("Raleway", normal, 600);
+    font-size: 30px;
+    color: rgba(85, 85, 85, 1);
+    text-align: center;
+    margin: 83px 0 0;
+  }
+
+  &-text {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 16px;
+    color: rgba(140, 140, 140, 1);
+    text-align: center;
+    line-height: 28px;
+    margin: 24px 570px 0;
+  }
+
+  &-multi-bg {
+    margin: 40px 345px 0;
+    min-height: 482px;
+    background-image: url(../img/ideas-center.jpg), url(../img/ideas-left.jpg),
+      url(../img/ideas-right.jpg);
+    min-width: 1204px;
+    background-repeat: no-repeat;
+    background-position: bottom center, bottom left, bottom right;
+  }
+}
