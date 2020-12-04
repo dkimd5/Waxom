@@ -1,0 +1,53 @@
+.sections {
+  .sections-list {
+    margin: 80px 377px 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 49px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 3px;
+      background-color: rgba(241, 238, 233, 1);
+      position: absolute;
+      top: 209px;
+      left: -10px;
+    }
+  }
+
+  &-item-svg {
+    fill: rgba(85, 85, 85, 1);
+  }
+
+  &-item-header {
+    text-align: center;
+    margin: 30px 0 0;
+    .font-mixin("Raleway", normal, 600);
+    font-size: 22px;
+    color: rgba(85, 85, 85, 1);
+  }
+
+  &-text {
+    text-align: center;
+    .font-mixin("Montserat", normal, 300);
+    font-size: 14px;
+    color: rgba(140, 140, 140, 1);
+    line-height: 24px;
+    margin: 24px 0 0;
+  }
+}
