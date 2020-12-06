@@ -255,8 +255,8 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   height: 3px;
   background-color: #f1eee9;
   position: absolute;
-  top: 209px;
-  left: 90px;
+  bottom: -25px;
+  left: 101px;
 }
 .sections-link:hover svg {
   fill: #c7b299;
@@ -434,14 +434,15 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 42px 375px 0;
+  margin: 42px 375px 0 350px;
   padding: 0;
 }
 .projects-list-two-item {
   margin: 0 30px 30px 0;
+  position: relative;
 }
 .projects-list-two-item:nth-child(3) {
-  margin: 0 0 10px;
+  margin: 0 0 30px;
 }
 .projects-list-two-item:nth-child(4),
 .projects-list-two-item:nth-child(5) {
@@ -450,10 +451,279 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 .projects-list-two-item:last-child {
   margin: 0;
 }
+.projects-img {
+  display: block;
+  width: 100%;
+}
+.projects-text-wrapper {
+  background-color: #fbfaf8;
+}
+.projects-card-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #c7b299;
+  padding: 30px 0 0 27px;
+  margin: 0;
+}
+.projects-card-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #d1d1d1;
+  line-height: 20px;
+  padding: 12px 0 27px 27px;
+  margin: 0;
+}
+.projects-button {
+  display: block;
+  position: absolute;
+  top: 106px;
+}
+.projects .link {
+  left: 145px;
+}
+.projects .search {
+  right: 145px;
+}
 .projects-more-button {
-  margin: 40px 0 0;
+  margin: 40px 0 80px;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
+  background-color: #998675;
+  outline: none;
+  text-transform: uppercase;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 23px;
+  padding: 19px 45px;
+  border: none;
+  border-radius: 3px;
+}
+.bg-video {
+  position: relative;
+}
+.bg-video-item {
+  object-fit: cover;
+}
+.bg-video-text-wrapper {
+  position: absolute;
+  top: 358px;
+  display: block;
+  left: 674px;
+}
+.bg-video-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+.bg-video-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 28px;
+  margin: 29px 0 0;
+  max-width: 570px;
+}
+.mobile {
+  padding: 195px 374px 178px 874px;
+  background-image: url(../img/mobile-img.png);
+  background-repeat: no-repeat;
+  background-position: bottom left 423px;
+}
+.mobile-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #555555;
+}
+.mobile-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #8c8c8c;
+  line-height: 28px;
+}
+.mobile-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 26px 0 0 99px;
+}
+.mobile-item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #8c8c8c;
+  line-height: 32px;
+  position: relative;
+}
+.mobile-item-svg {
+  position: absolute;
+  display: block;
+  left: -48px;
+  top: 5px;
+  background-color: #c7b299;
+  border-radius: 22px;
+  fill: #fff;
+}
+.counters {
+  background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+  padding: 69px 504px 60px 496px;
+}
+.counters-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.counters-item {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counters-item-svg {
+  fill: #c7b299;
+}
+.counters-number {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 36px;
+  margin: 30px 0 0;
+}
+.counters-header {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #c7b299;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 21px 0 0;
+}
+.counters-line {
+  height: 2px;
+  width: 30px;
+  border: none;
+  background-color: #ffffff;
+  margin: 24px 0 0;
+}
+.posts-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #555555;
+  text-align: center;
+  margin: 82px 0 0;
+}
+.posts-text {
+  max-width: 769px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #8c8c8c;
+  text-align: center;
+  line-height: 28px;
+  margin: 30px 568px 0 581px;
+}
+.posts-list {
+  list-style-type: none;
+  margin: 40px 350px 0 376px;
+  padding: 0;
+  display: flex;
+}
+.posts-item {
+  margin: 0 30px 0 0;
+  max-width: 370px;
+  background-color: #f8f8f8;
+}
+.posts-item:last-child {
+  margin: 0;
+}
+.posts-img {
+  display: block;
+}
+.posts-text-wrapper {
+  padding: 0 0 0 27px;
+}
+.posts-card-header {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #555555;
+  margin: 30px 0 0;
+}
+.posts-card-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #8c8c8c;
+  line-height: 22px;
+  margin: 19px 0 0;
+}
+.posts-card-link {
+  display: block;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #c7b299;
+  line-height: 20px;
+  margin: 27px 0 33px;
+}
+.posts-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 80px;
+}
+.posts-button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0 8px 0 0;
+}
+.posts-button-svg {
+  fill: #d1d1d1;
+}
+.partners {
+  background-image: url(../img/partners-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 405px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partners-link {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

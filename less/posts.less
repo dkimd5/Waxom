@@ -1,0 +1,87 @@
+.posts {
+  &-header {
+    .font-mixin("Raleway", normal, 600);
+    font-size: 30px;
+    color: rgba(85, 85, 85, 1);
+    text-align: center;
+    margin: 82px 0 0;
+  }
+
+  &-text {
+    max-width: 769px;
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 16px;
+    color: rgba(140, 140, 140, 1);
+    text-align: center;
+    line-height: 28px;
+    margin: 30px 568px 0 581px;
+  }
+
+  &-list {
+    list-style-type: none;
+    margin: 40px 350px 0 376px;
+    padding: 0;
+    display: flex;
+  }
+
+  &-item {
+    margin: 0 30px 0 0;
+    max-width: 370px;
+    background-color: rgba(248, 248, 248, 1);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &-img {
+    display: block;
+  }
+
+  &-text-wrapper {
+    padding: 0 0 0 27px;
+  }
+
+  &-card-header {
+    .font-mixin("Raleway", normal, 500);
+    font-size: 20px;
+    color: rgba(85, 85, 85, 1);
+    margin: 30px 0 0;
+  }
+
+  &-card-text {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 14px;
+    color: rgba(140, 140, 140, 1);
+    line-height: 22px;
+    margin: 19px 0 0;
+  }
+
+  &-card-link {
+    display: block;
+    text-decoration: none;
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 14px;
+    color: rgba(199, 178, 153, 1);
+    line-height: 20px;
+    margin: 27px 0 33px;
+  }
+
+  &-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 80px;
+  }
+
+  &-button {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0 8px 0 0;
+  }
+
+  &-button-svg {
+    fill: rgba(209, 209, 209, 1);
+  }
+}
