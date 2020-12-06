@@ -375,6 +375,13 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   border-radius: 3px;
   margin: 0 0 0 470px;
 }
+.aside-link:hover {
+  color: black;
+}
+.aside-link:active {
+  color: #fff;
+  background-color: #8c8c8c;
+}
 .projects-header {
   font-family: "Raleway";
   font-style: normal;
@@ -451,12 +458,42 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 .projects-list-two-item:last-child {
   margin: 0;
 }
+.projects-list-two-item:hover img {
+  filter: brightness(50%);
+}
+.projects-list-two-item:hover .projects-text-wrapper {
+  background-color: #362f2d;
+}
+.projects-list-two-item:hover h3 {
+  color: #ffffff;
+}
+.projects-list-two-item:hover p {
+  color: #c7b299;
+}
+.projects-list-two-item:hover .projects-text-wrapper::before {
+  border-bottom: 10px solid #362f2d;
+}
+.projects-list-two-item:hover .projects-button {
+  display: block;
+  fill: #fff;
+}
 .projects-img {
   display: block;
   width: 100%;
+  position: relative;
 }
 .projects-text-wrapper {
   background-color: #fbfaf8;
+  position: relative;
+}
+.projects-text-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 15px solid transparent;
+  border-bottom: 10px solid #fbfaf8;
+  top: -25px;
+  left: 19px;
 }
 .projects-card-header {
   font-family: "Raleway";
@@ -478,9 +515,15 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   margin: 0;
 }
 .projects-button {
-  display: block;
+  display: none;
   position: absolute;
   top: 106px;
+}
+.projects-button:hover svg {
+  fill: #c7b299;
+}
+.projects-button:active svg {
+  fill: #5151ca;
 }
 .projects .link {
   left: 145px;
@@ -506,6 +549,13 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   padding: 19px 45px;
   border: none;
   border-radius: 3px;
+}
+.projects-more-button:hover {
+  color: black;
+}
+.projects-more-button:active {
+  color: #fff;
+  background-color: lightgrey;
 }
 .bg-video {
   position: relative;
@@ -660,16 +710,28 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 .posts-item {
   margin: 0 30px 0 0;
   max-width: 370px;
-  background-color: #f8f8f8;
 }
 .posts-item:last-child {
   margin: 0;
+}
+.posts-item:hover img {
+  filter: brightness(50%);
+}
+.posts-item:hover .posts-text-wrapper {
+  background-color: #362f2d;
+}
+.posts-item:hover h3 {
+  color: #c7b299;
+}
+.posts-item:hover p {
+  color: #fff;
 }
 .posts-img {
   display: block;
 }
 .posts-text-wrapper {
-  padding: 0 0 0 27px;
+  padding: 30px 0 33px 27px;
+  background-color: #f8f8f8;
 }
 .posts-card-header {
   font-family: "Raleway";
@@ -677,7 +739,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   font-weight: 500;
   font-size: 20px;
   color: #555555;
-  margin: 30px 0 0;
+  margin: 0;
 }
 .posts-card-text {
   font-family: "Montserrat";
@@ -697,7 +759,17 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   font-size: 14px;
   color: #c7b299;
   line-height: 20px;
-  margin: 27px 0 33px;
+  margin: 27px 0 0;
+  position: relative;
+}
+.posts-card-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 4px solid transparent;
+  border-left: 5px solid #c7b299;
+  left: 82px;
+  bottom: 7px;
 }
 .posts-buttons-wrapper {
   display: flex;
@@ -710,6 +782,15 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: transparent;
   padding: 0;
   margin: 0 8px 0 0;
+}
+.posts-button:hover svg {
+  fill: #c7b299;
+}
+.posts-button:active svg {
+  fill: #5151ca;
+}
+.posts-button:focus {
+  outline: none;
 }
 .posts-button-svg {
   fill: #d1d1d1;

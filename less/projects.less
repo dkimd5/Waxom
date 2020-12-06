@@ -84,15 +84,52 @@
     &:last-child {
       margin: 0;
     }
+
+    &:hover img {
+      filter: brightness(50%);
+    }
+
+    &:hover .projects-text-wrapper {
+      background-color: rgba(54, 47, 45, 1);
+    }
+
+    &:hover h3 {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &:hover p {
+      color: @hover-color;
+    }
+
+    &:hover .projects-text-wrapper::before {
+      border-bottom: 10px solid rgba(54, 47, 45, 1);
+    }
+
+    &:hover .projects-button {
+      display: block;
+      fill: #fff;
+    }
   }
 
   &-img {
     display: block;
     width: 100%;
+    position: relative;
   }
 
   &-text-wrapper {
     background-color: rgba(251, 250, 248, 1);
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 15px solid transparent;
+      border-bottom: 10px solid rgba(251, 250, 248, 1);
+      top: -25px;
+      left: 19px;
+    }
   }
 
   &-card-header {
@@ -113,9 +150,17 @@
   }
 
   &-button {
-    display: block;
+    display: none;
     position: absolute;
     top: 106px;
+
+    &:hover svg {
+      fill: @hover-color;
+    }
+
+    &:active svg {
+      fill: @active-color;
+    }
   }
 
   .link {
@@ -142,5 +187,14 @@
     padding: 19px 45px;
     border: none;
     border-radius: 3px;
+
+    &:hover {
+      color: black;
+    }
+
+    &:active {
+      color: #fff;
+      background-color: lightgrey;
+    }
   }
 }
