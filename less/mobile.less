@@ -1,0 +1,43 @@
+.mobile {
+  padding: 195px 374px 178px 874px;
+  background-image: url(../img/mobile-img.png);
+  background-repeat: no-repeat;
+  background-position: bottom left 423px;
+
+  &-header {
+    .font-mixin("Raleway", normal, 600);
+    font-size: 30px;
+    color: rgba(85, 85, 85, 1);
+  }
+
+  &-text {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 16px;
+    color: rgba(140, 140, 140, 1);
+    line-height: 28px;
+  }
+
+  &-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 26px 0 0 99px;
+  }
+
+  &-item {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 16px;
+    color: rgba(140, 140, 140, 1);
+    line-height: 32px;
+    position: relative;
+  }
+
+  &-item-svg {
+    position: absolute;
+    display: block;
+    left: -48px;
+    top: 5px;
+    background-color: rgba(199, 178, 153, 1);
+    border-radius: 22px;
+    fill: #fff;
+  }
+}

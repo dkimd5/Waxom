@@ -1,0 +1,31 @@
+.bg-video {
+  position: relative;
+
+  &-item {
+    object-fit: cover;
+  }
+
+  &-text-wrapper {
+    position: absolute;
+    top: 358px;
+    display: block;
+    left: 674px;
+  }
+
+  &-header {
+    .font-mixin("Raleway", normal, 500);
+    font-size: 30px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+  }
+
+  &-text {
+    .font-mixin ("Montserrat", normal, 300);;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 28px;
+    margin: 29px 0 0;
+    max-width: 570px;
+  }
+}

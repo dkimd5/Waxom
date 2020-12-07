@@ -1,0 +1,55 @@
+.counters {
+  background-image: linear-gradient(
+    90deg,
+    rgba(33, 27, 25, 1) 0%,
+    rgba(78, 52, 39, 1) 100%
+  );
+  padding: 69px 504px 60px 496px;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-item-svg {
+    fill: rgba(199, 178, 153, 1);
+  }
+
+  &-number {
+    .font-mixin("Montserrat", normal, 200);
+    font-size: 48px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 36px;
+    margin: 30px 0 0;
+  }
+
+  &-header {
+    .font-mixin("Montserrat", normal, 300);
+    font-size: 14px;
+    color: rgba(199, 178, 153, 1);
+    text-align: center;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 21px 0 0;
+  }
+
+  &-line {
+    height: 2px;
+    width: 30px;
+    border: none;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 24px 0 0;
+  }
+}
