@@ -91,6 +91,10 @@
 }
 .header-logo-svg {
   fill: #ffffff;
+  transition: 1s;
+}
+.header-logo-svg:hover {
+  transform: rotate(360deg);
 }
 .header-logo-txt {
   font-family: "Raleway";
@@ -806,5 +810,8 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .partners-link {
   display: block;
+}
+.partners-img:hover {
+  transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
