@@ -173,10 +173,56 @@
   &-content {
     display: flex;
     width: 400%;
+    transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   &-img {
     object-fit: cover;
+    display: block;
+    position: relative;
+  }
+
+  &-text-wrapper {
+    position: absolute;
+    top: 381px;
+    left: 666px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-top-text {
+    .font-mixin("Raleway", normal, 500);
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+    margin: 0 0 14px;
+  }
+
+  &-header {
+    .font-mixin("Raleway", normal, 800);
+    color: rgba(255, 255, 255, 1);
+    font-size: 52px;
+    margin: 0 0 19px;
+  }
+
+  &-main-text {
+    .font-mixin("Montserrat", normal, 300);
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    margin: 0 0 32px;
+    max-width: 570px;
+    text-align: center;
+  }
+
+  &-button {
+    text-decoration: none;
+    .font-mixin("Raleway", normal, 800);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    background: rgba(153, 134, 117, 1);
+    padding: 21px 38px;
+    border-radius: 3px;
   }
 
   &-bullets {
@@ -190,29 +236,60 @@
 
   &-bullets label {
     display: block;
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    background-color: #ccc;
     margin: 0 10px;
-    display: flex;
+    position: relative;
   }
 
-  &-bullet-svg {
-    align-self: center;
+  &-bullets label:after {
+    border: 3px solid @hover-color;
+    content: " ";
+    display: none;
+    height: 15px;
+    width: 15px;
+    left: -5px;
+    top: -5px;
+    position: absolute;
+    border-radius: 50%;
   }
 
-  // &-bullets:active label {
-  //   outline: none;
-  // }
+  &-bullets:active label {
+    outline: none;
+  }
 }
 
-.slide1:checked ~ .slider-bullets label:nth-child(1) .slider-bullet-svg,
-.slide2:checked ~ .slider-bullets label:nth-child(2) .slider-bullet-svg,
+.slide1:checked ~ .slider-bullets label:nth-child(1),
+.slide2:checked ~ .slider-bullets label:nth-child(2),
 .slide3:checked ~ .slider-bullets label:nth-child(3),
 .slide4:checked ~ .slider-bullets label:nth-child(4),
 .slide5:checked ~ .slider-bullets label:nth-child(5) {
-  fill: transparent;
-  background-image: url(../img/slider-bullet-active.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  transition: 0.5s;
+  background-color: transparent;
+}
+
+.slide1:checked ~ .slider-bullets label:nth-child(1)::after,
+.slide2:checked ~ .slider-bullets label:nth-child(2)::after,
+.slide3:checked ~ .slider-bullets label:nth-child(3)::after,
+.slide4:checked ~ .slider-bullets label:nth-child(4)::after,
+.slide5:checked ~ .slider-bullets label:nth-child(5)::after {
+  display: block;
+}
+
+.slide1:checked ~ .slider-content {
+  margin-left: 0;
+}
+.slide2:checked ~ .slider-content {
+  margin-left: -100%;
+}
+.slide3:checked ~ .slider-content {
+  margin-left: -200%;
+}
+.slide4:checked ~ .slider-content {
+  margin-left: -300%;
+}
+.slide5:checked ~ .slider-content {
+  margin-left: -400%;
 }
