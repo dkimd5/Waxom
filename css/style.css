@@ -62,13 +62,11 @@
 }
 .header {
   background-color: #363636;
-  background-image: url(../img/slider-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 1024px;
 }
 .header-wrapper {
   display: flex;
+  position: absolute;
+  z-index: 1;
   padding: 40px 0 0;
 }
 .header-logo {
@@ -189,48 +187,47 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   fill: #ffffff;
 }
 .slider {
+  overflow: hidden;
+  position: relative;
+}
+.slider input[type="radio"] {
+  display: none;
+}
+.slider-content {
   display: flex;
-  flex-direction: column;
+  width: 400%;
+}
+.slider-img {
+  object-fit: cover;
+}
+.slider-bullets {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
   align-items: center;
-  margin: 285px 0 0;
 }
-.slider-top-text {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 36px;
-  margin: 0 0 14px;
+.slider-bullets label {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  margin: 0 10px;
+  display: flex;
 }
-.slider-header {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 800;
-  color: #ffffff;
-  font-size: 52px;
-  margin: 0 0 19px;
+.slider-bullet-svg {
+  align-self: center;
 }
-.slider-text {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 300;
-  color: #ffffff;
-  font-size: 16px;
-  margin: 0 0 32px;
-  max-width: 570px;
-  text-align: center;
-}
-.slider-button {
-  text-decoration: none;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 14px;
-  color: #ffffff;
-  text-transform: uppercase;
-  background: #998675;
-  padding: 21px 38px;
-  border-radius: 3px;
+.slide1:checked ~ .slider-bullets label:nth-child(1) .slider-bullet-svg,
+.slide2:checked ~ .slider-bullets label:nth-child(2) .slider-bullet-svg,
+.slide3:checked ~ .slider-bullets label:nth-child(3),
+.slide4:checked ~ .slider-bullets label:nth-child(4),
+.slide5:checked ~ .slider-bullets label:nth-child(5) {
+  fill: transparent;
+  background-image: url(../img/slider-bullet-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .sections {
   padding: 80px 0 108px;

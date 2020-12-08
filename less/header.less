@@ -16,13 +16,11 @@
 
 .header {
   background-color: rgba(54, 54, 54, 1);
-  background-image: url(../img/slider-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 1024px;
 
   &-wrapper {
     display: flex;
+    position: absolute;
+    z-index: 1;
     padding: 40px 0 0;
   }
 
@@ -165,42 +163,56 @@
 }
 
 .slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 285px 0 0;
+  overflow: hidden;
+  position: relative;
 
-  &-top-text {
-    .font-mixin("Raleway", normal, 500);
-    color: rgba(255, 255, 255, 1);
-    font-size: 36px;
-    margin: 0 0 14px;
+  input[type="radio"] {
+    display: none;
   }
 
-  &-header {
-    .font-mixin("Raleway", normal, 800);
-    color: rgba(255, 255, 255, 1);
-    font-size: 52px;
-    margin: 0 0 19px;
+  &-content {
+    display: flex;
+    width: 400%;
   }
 
-  &-text {
-    .font-mixin("Montserrat", normal, 300);
-    color: rgba(255, 255, 255, 1);
-    font-size: 16px;
-    margin: 0 0 32px;
-    max-width: 570px;
-    text-align: center;
+  &-img {
+    object-fit: cover;
   }
 
-  &-button {
-    text-decoration: none;
-    .font-mixin("Raleway", normal, 800);
-    font-size: 14px;
-    color: rgba(255, 255, 255, 1);
-    text-transform: uppercase;
-    background: rgba(153, 134, 117, 1);
-    padding: 21px 38px;
-    border-radius: 3px;
+  &-bullets {
+    position: absolute;
+    bottom: 42px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
   }
+
+  &-bullets label {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin: 0 10px;
+    display: flex;
+  }
+
+  &-bullet-svg {
+    align-self: center;
+  }
+
+  // &-bullets:active label {
+  //   outline: none;
+  // }
+}
+
+.slide1:checked ~ .slider-bullets label:nth-child(1) .slider-bullet-svg,
+.slide2:checked ~ .slider-bullets label:nth-child(2) .slider-bullet-svg,
+.slide3:checked ~ .slider-bullets label:nth-child(3),
+.slide4:checked ~ .slider-bullets label:nth-child(4),
+.slide5:checked ~ .slider-bullets label:nth-child(5) {
+  fill: transparent;
+  background-image: url(../img/slider-bullet-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
