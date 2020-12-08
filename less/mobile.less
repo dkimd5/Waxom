@@ -1,13 +1,18 @@
 .mobile {
-  padding: 195px 374px 178px 874px;
+  padding: 195px 0 178px 0;
   background-image: url(../img/mobile-img.png);
   background-repeat: no-repeat;
   background-position: bottom left 423px;
+
+  &-text-wrapper {
+    margin: 0 374px 0 874px;
+  }
 
   &-header {
     .font-mixin("Raleway", normal, 600);
     font-size: 30px;
     color: rgba(85, 85, 85, 1);
+    margin: 0;
   }
 
   &-text {
@@ -15,6 +20,7 @@
     font-size: 16px;
     color: rgba(140, 140, 140, 1);
     line-height: 28px;
+    margin: 40px 0 0;
   }
 
   &-list {
