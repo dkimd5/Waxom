@@ -826,7 +826,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 .partners-img:hover {
   transform: scale(1.1);
 }
-.footer {
+.footer-main-block {
   background-color: #191919;
   padding: 80px 0 70px;
 }
@@ -864,9 +864,6 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   fill: #ffffff;
   transition: 1s;
 }
-.footer-logo-svg:hover {
-  transform: rotate(360deg);
-}
 .footer-logo-txt {
   font-family: "Raleway";
   font-style: normal;
@@ -875,6 +872,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #ffffff;
   text-align: right;
   letter-spacing: -0.04em;
+  transition: 1s;
 }
 .footer-text {
   font-family: "Montserrat";
@@ -1020,5 +1018,49 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .footer-widget-img {
   display: block;
+}
+.footer-copyrights {
+  padding: 45px 374px;
+  background-color: #111111;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copyrights a {
+  text-decoration: none;
+}
+.footer-copyright-left-block {
+  display: flex;
+}
+.footer-copyright-right-block {
+  display: flex;
+}
+.footer-copyright-text {
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-weight: 300;
+  color: #555555;
+  line-height: 20px;
+  margin: 0 20px 0 0;
+  display: block;
+}
+.footer-divide-line {
+  position: relative;
+}
+.footer-divide-line:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: #252525;
+  right: -10px;
+}
+.footer-brand-link {
+  color: #959595;
+}
+.footer-brand-link:hover {
+  color: #c7b299;
+}
+.footer-brand-link:active {
+  color: #5151ca;
 }
 /*# sourceMappingURL=style.css.map */

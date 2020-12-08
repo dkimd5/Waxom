@@ -1,6 +1,8 @@
 .footer {
-  background-color: rgba(25, 25, 25, 1);
-  padding: 80px 0 70px;
+  &-main-block {
+    background-color: rgba(25, 25, 25, 1);
+    padding: 80px 0 70px;
+  }
 
   &-list {
     margin: 0 375px;
@@ -41,10 +43,6 @@
   &-logo-svg {
     fill: rgba(255, 255, 255, 1);
     transition: 1s;
-
-    &:hover {
-      transform: rotate(360deg);
-    }
   }
 
   &-logo-txt {
@@ -53,6 +51,7 @@
     color: rgba(255, 255, 255, 1);
     text-align: right;
     letter-spacing: -0.04em;
+    transition: 1s;
   }
 
   &-text {
@@ -215,5 +214,59 @@
 
   &-widget-img {
     display: block;
+  }
+
+  &-copyrights {
+    padding: 45px 374px;
+    background-color: rgba(17, 17, 17, 1);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-copyrights a {
+    text-decoration: none;
+  }
+
+  &-copyright-left-block {
+    display: flex;
+  }
+
+  &-copyright-right-block {
+    display: flex;
+  }
+
+  &-copyright-text {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(85, 85, 85, 1);
+    line-height: 20px;
+    margin: 0 20px 0 0;
+    display: block;
+  }
+
+  &-divide-line {
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(37, 37, 37, 1);
+      right: -10px;
+    }
+  }
+
+  &-brand-link {
+    color: rgba(149, 149, 149, 1);
+
+    &:hover {
+      color: @hover-color;
+    }
+
+    &:active {
+      color: @active-color;
+    }
   }
 }
