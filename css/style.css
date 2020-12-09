@@ -214,25 +214,38 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-position: center;
   background-size: cover;
 }
-.slider .slide1 {
+.slider .slide-one {
   background-image: url(../img/slider-bg.jpg);
 }
-.slider .slide2 {
+.slider .slide-two {
   background-image: url(../img/slide2-trees-img.jpg);
 }
-.slider .slide3 {
+.slider .slide-two::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+.slider .slide-three {
   background-image: url(../img/slide3-snowflake-img.jpg);
 }
-.slider .slide4 {
+.slider .slide-four {
   background-image: url(../img/slide4-sakura-img.jpg);
 }
-.slider .slide5 {
-  background-image: url(../img/slide5-night-img.jpg);
-}
-.slider-img {
-  object-fit: cover;
+.slider .slide-four::before {
+  content: "";
   display: block;
-  position: relative;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+.slider .slide-five {
+  background-image: url(../img/slide5-night-img.jpg);
 }
 .slider-text-wrapper {
   position: absolute;
@@ -285,6 +298,64 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   padding: 21px 38px;
   border-radius: 3px;
 }
+.slider-arrows label:after {
+  content: "";
+  display: none;
+  width: 52px;
+  height: 52px;
+  border-top: 2px solid #d3c1ad;
+  border-right: 2px solid #d3c1ad;
+  transform: rotate(45deg);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 8%;
+  bottom: 0;
+}
+.slider-arrows label:hover:after {
+  border-top: 2px solid grey;
+  border-right: 2px solid grey;
+}
+.slider-arrows label:active:after {
+  border-top: 2px solid #5151ca;
+  border-right: 2px solid #5151ca;
+}
+.slider-arrows label:before {
+  content: "";
+  display: none;
+  width: 52px;
+  height: 52px;
+  border-bottom: 2px solid #d3c1ad;
+  border-left: 2px solid #d3c1ad;
+  transform: rotate(45deg);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 8%;
+  bottom: 0;
+}
+.slider-arrows label:hover::before {
+  border-bottom: 2px solid grey;
+  border-left: 2px solid grey;
+}
+.slider-arrows label:active::before {
+  border-bottom: 2px solid #5151ca;
+  border-left: 2px solid #5151ca;
+}
+.slider .slide1:checked ~ .slider-arrows label:nth-child(5)::before,
+.slider .slide2:checked ~ .slider-arrows label:nth-child(1)::before,
+.slider .slide3:checked ~ .slider-arrows label:nth-child(2)::before,
+.slider .slide4:checked ~ .slider-arrows label:nth-child(3)::before,
+.slider .slide5:checked ~ .slider-arrows label:nth-child(4)::before {
+  display: inline-block;
+}
+.slider .slide1:checked ~ .slider-arrows label:nth-child(2)::after,
+.slider .slide2:checked ~ .slider-arrows label:nth-child(3)::after,
+.slider .slide3:checked ~ .slider-arrows label:nth-child(4)::after,
+.slider .slide4:checked ~ .slider-arrows label:nth-child(5)::after,
+.slider .slide5:checked ~ .slider-arrows label:nth-child(1)::after {
+  display: inline-block;
+}
 .slider-bullets {
   position: absolute;
   bottom: 42px;
@@ -301,6 +372,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: #ccc;
   margin: 0 10px;
   position: relative;
+  cursor: pointer;
 }
 .slider-bullets label:after {
   border: 3px solid #c7b299;

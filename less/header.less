@@ -193,30 +193,44 @@
     background-size: cover;
   }
 
-  .slide1 {
+  .slide-one {
     background-image: url(../img/slider-bg.jpg);
   }
 
-  .slide2 {
+  .slide-two {
     background-image: url(../img/slide2-trees-img.jpg);
   }
 
-  .slide3 {
+  .slide-two::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide-three {
     background-image: url(../img/slide3-snowflake-img.jpg);
   }
 
-  .slide4 {
+  .slide-four {
     background-image: url(../img/slide4-sakura-img.jpg);
   }
 
-  .slide5 {
-    background-image: url(../img/slide5-night-img.jpg);
+  .slide-four::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
   }
 
-  &-img {
-    object-fit: cover;
-    display: block;
-    position: relative;
+  .slide-five {
+    background-image: url(../img/slide5-night-img.jpg);
   }
 
   &-text-wrapper {
@@ -267,6 +281,73 @@
     border-radius: 3px;
   }
 
+  &-arrows label:after {
+    content: "";
+    display: none;
+    width: 52px;
+    height: 52px;
+    border-top: 2px solid #d3c1ad;
+    border-right: 2px solid #d3c1ad;
+    transform: rotate(45deg);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 8%;
+    bottom: 0;
+  }
+
+  &-arrows label:hover:after {
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+  }
+
+  &-arrows label:active:after {
+    border-top: 2px solid @active-color;
+    border-right: 2px solid @active-color;
+  }
+
+  &-arrows label:before {
+    content: "";
+    // display: inline-block;
+    display: none;
+    width: 52px;
+    height: 52px;
+    border-bottom: 2px solid #d3c1ad;
+    border-left: 2px solid #d3c1ad;
+    transform: rotate(45deg);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 8%;
+    bottom: 0;
+  }
+
+  &-arrows label:hover::before {
+    border-bottom: 2px solid grey;
+    border-left: 2px solid grey;
+  }
+
+  &-arrows label:active::before {
+    border-bottom: 2px solid @active-color;
+    border-left: 2px solid @active-color;
+  }
+
+  .slide1:checked ~ .slider-arrows label:nth-child(5)::before,
+  .slide2:checked ~ .slider-arrows label:nth-child(1)::before,
+  .slide3:checked ~ .slider-arrows label:nth-child(2)::before,
+  .slide4:checked ~ .slider-arrows label:nth-child(3)::before,
+  .slide5:checked ~ .slider-arrows label:nth-child(4)::before {
+    display: inline-block;
+  }
+
+  .slide1:checked ~ .slider-arrows label:nth-child(2)::after,
+  .slide2:checked ~ .slider-arrows label:nth-child(3)::after,
+  .slide3:checked ~ .slider-arrows label:nth-child(4)::after,
+  .slide4:checked ~ .slider-arrows label:nth-child(5)::after,
+  .slide5:checked ~ .slider-arrows label:nth-child(1)::after {
+    display: inline-block;
+  }
+
   &-bullets {
     position: absolute;
     bottom: 42px;
@@ -284,6 +365,7 @@
     background-color: #ccc;
     margin: 0 10px;
     position: relative;
+    cursor: pointer;
   }
 
   &-bullets label:after {
