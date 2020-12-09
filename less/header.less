@@ -239,9 +239,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin: auto;
     width: 37%;
     height: 26%;
@@ -252,6 +250,7 @@
     color: rgba(255, 255, 255, 1);
     font-size: 36px;
     margin: 0 0 14px;
+    display: block;
   }
 
   &-header {
@@ -259,6 +258,7 @@
     color: rgba(255, 255, 255, 1);
     font-size: 52px;
     margin: 0 0 19px;
+    text-align: center;
   }
 
   &-main-text {
@@ -266,7 +266,6 @@
     color: rgba(255, 255, 255, 1);
     font-size: 16px;
     margin: 0 0 32px;
-    max-width: 570px;
     text-align: center;
   }
 
@@ -279,6 +278,17 @@
     background: rgba(153, 134, 117, 1);
     padding: 21px 38px;
     border-radius: 3px;
+    margin: 20px 0 0;
+    display: inline-block;
+
+    &:hover {
+      background-color: lightgray;
+      transition: background-color 0.2s linear;
+    }
+
+    &:active {
+      background-color: @active-color;
+    }
   }
 
   &-arrows label:after {
@@ -308,7 +318,6 @@
 
   &-arrows label:before {
     content: "";
-    // display: inline-block;
     display: none;
     width: 52px;
     height: 52px;

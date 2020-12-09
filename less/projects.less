@@ -15,7 +15,8 @@
     color: rgba(140, 140, 140, 1);
     text-align: center;
     line-height: 28px;
-    margin: 24px 568px 0 581px;
+    margin: 24px auto 0;
+    width: 41%;
   }
 
   &-list-one {
@@ -63,29 +64,15 @@
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    margin: 42px 375px 0 350px;
-    //разрешение окна браузера меньше чем разрешение экрана
+    margin: 42px auto 0;
     padding: 0;
+    width: 61%;
+    justify-content: space-between;
   }
 
   &-list-two-item {
-    margin: 0 30px 30px 0;
+    margin: 0 0 30px 0;
     position: relative;
-
-    //Временное решение с margin правой колонны и последнего ряда в списке
-
-    &:nth-child(3) {
-      margin: 0 0 30px;
-    }
-
-    &:nth-child(4),
-    &:nth-child(5) {
-      margin: 0 30px 0 0;
-    }
-
-    &:last-child {
-      margin: 0;
-    }
 
     &:hover img {
       filter: brightness(50%);

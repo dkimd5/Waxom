@@ -253,9 +253,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   left: 0;
   bottom: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   margin: auto;
   width: 37%;
   height: 26%;
@@ -267,6 +265,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #ffffff;
   font-size: 36px;
   margin: 0 0 14px;
+  display: block;
 }
 .slider-header {
   font-family: "Raleway";
@@ -275,6 +274,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #ffffff;
   font-size: 52px;
   margin: 0 0 19px;
+  text-align: center;
 }
 .slider-main-text {
   font-family: "Montserrat";
@@ -283,7 +283,6 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #ffffff;
   font-size: 16px;
   margin: 0 0 32px;
-  max-width: 570px;
   text-align: center;
 }
 .slider-button {
@@ -297,6 +296,15 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background: #998675;
   padding: 21px 38px;
   border-radius: 3px;
+  margin: 20px 0 0;
+  display: inline-block;
+}
+.slider-button:hover {
+  background-color: lightgray;
+  transition: background-color 0.2s linear;
+}
+.slider-button:active {
+  background-color: #5151ca;
 }
 .slider-arrows label:after {
   content: "";
@@ -421,14 +429,16 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 .sections {
   padding: 80px 0 108px;
 }
-.sections .sections-list {
-  margin: 0 377px 0;
+.sections-list {
+  margin: 0 auto;
   padding: 0;
   display: flex;
   list-style-type: none;
+  width: 61%;
+  justify-content: space-between;
 }
 .sections-item {
-  margin: 0 26px 0 0;
+  width: 23.3%;
 }
 .sections-item:last-child {
   margin: 0;
@@ -449,7 +459,8 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: #f1eee9;
   position: absolute;
   bottom: -25px;
-  left: 101px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .sections-link:hover svg {
   fill: #c7b299;
@@ -513,10 +524,12 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #8c8c8c;
   text-align: center;
   line-height: 28px;
-  margin: 24px 570px 0;
+  margin: 24px auto 0;
+  width: 40.6%;
 }
 .ideas-multi-bg {
-  margin: 40px 345px 0;
+  margin: 40px auto 0;
+  width: 64%;
   min-height: 482px;
   background-image: url(../img/ideas-center.jpg), url(../img/ideas-left.jpg), url(../img/ideas-right.jpg);
   min-width: 1204px;
@@ -525,11 +538,13 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .aside {
   background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
-  display: flex;
   padding: 48px 0;
 }
 .aside-wrapper {
-  margin: 0 0 0 376px;
+  width: 61%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .aside-header {
   font-family: "Raleway";
@@ -564,7 +579,6 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: #998675;
   padding: 19px 29px;
   border-radius: 3px;
-  margin: 0 0 0 470px;
 }
 .aside-link:hover {
   color: black;
@@ -593,7 +607,8 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #8c8c8c;
   text-align: center;
   line-height: 28px;
-  margin: 24px 568px 0 581px;
+  margin: 24px auto 0;
+  width: 41%;
 }
 .projects-list-one {
   list-style-type: none;
@@ -635,22 +650,14 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 42px 375px 0 350px;
+  margin: 42px auto 0;
   padding: 0;
+  width: 61%;
+  justify-content: space-between;
 }
 .projects-list-two-item {
-  margin: 0 30px 30px 0;
+  margin: 0 0 30px 0;
   position: relative;
-}
-.projects-list-two-item:nth-child(3) {
-  margin: 0 0 30px;
-}
-.projects-list-two-item:nth-child(4),
-.projects-list-two-item:nth-child(5) {
-  margin: 0 30px 0 0;
-}
-.projects-list-two-item:last-child {
-  margin: 0;
 }
 .projects-list-two-item:hover img {
   filter: brightness(50%);
@@ -759,9 +766,12 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .bg-video-text-wrapper {
   position: absolute;
-  top: 358px;
+  top: 45%;
   display: block;
-  left: 674px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30%;
 }
 .bg-video-header {
   font-family: "Raleway";
@@ -770,6 +780,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   font-size: 30px;
   color: #ffffff;
   text-align: center;
+  margin: 0;
 }
 .bg-video-text {
   font-family: "Montserrat";
@@ -779,17 +790,16 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #ffffff;
   text-align: center;
   line-height: 28px;
-  margin: 29px 0 0;
-  max-width: 570px;
+  margin: 20px 0 0;
 }
 .mobile {
   padding: 195px 0 178px 0;
   background-image: url(../img/mobile-img.png);
   background-repeat: no-repeat;
-  background-position: bottom left 423px;
+  background-position: bottom left 22%;
 }
 .mobile-text-wrapper {
-  margin: 0 374px 0 874px;
+  margin: 0 19% 0 45%;
 }
 .mobile-header {
   font-family: "Raleway";
@@ -839,8 +849,9 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  margin: 0 504px 0 496px;
+  margin: 0 auto;
   padding: 0;
+  width: 48%;
 }
 .counters-item {
   padding: 0;
@@ -901,17 +912,20 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #8c8c8c;
   text-align: center;
   line-height: 28px;
-  margin: 30px 568px 0 581px;
+  margin: 30px auto 0;
+  width: 40%;
 }
 .posts-list {
   list-style-type: none;
-  margin: 40px 350px 0 376px;
+  margin: 40px auto 0;
   padding: 0;
   display: flex;
+  width: 67%;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .posts-item {
-  margin: 0 30px 0 0;
-  max-width: 370px;
+  width: 370px;
 }
 .posts-item:last-child {
   margin: 0;
@@ -930,6 +944,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .posts-img {
   display: block;
+  width: 100%;
 }
 .posts-text-wrapper {
   padding: 30px 0 33px 27px;
@@ -1001,10 +1016,14 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-image: url(../img/partners-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 405px;
+  padding: 140px 0;
+}
+.partners-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 55%;
+  margin: 0 auto;
 }
 .partners-link {
   display: block;

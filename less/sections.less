@@ -1,15 +1,17 @@
 .sections {
   padding: 80px 0 108px;
 
-  .sections-list {
-    margin: 0 377px 0;
+  &-list {
+    margin: 0 auto;
     padding: 0;
     display: flex;
     list-style-type: none;
+    width: 61%;
+    justify-content: space-between;
   }
 
   &-item {
-    margin: 0 26px 0 0;
+    width: 23.3%;
   }
 
   &-item:last-child {
@@ -32,7 +34,8 @@
       background-color: rgba(241, 238, 233, 1);
       position: absolute;
       bottom: -25px;
-      left: 101px;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
 
     &:hover svg {
