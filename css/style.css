@@ -49,6 +49,7 @@
 .container {
   max-width: 1920px;
   margin: 0 auto;
+  position: relative;
 }
 .visually-hidden {
   position: absolute;
@@ -68,6 +69,13 @@
   position: absolute;
   z-index: 1;
   padding: 40px 0 0;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 61%;
+  height: 5%;
 }
 .header-logo {
   display: flex;
@@ -75,7 +83,6 @@
   align-items: center;
   width: 181px;
   text-decoration: none;
-  margin: 0 0 0 376px;
 }
 .header-logo:hover > svg,
 .header-logo:hover > span {
@@ -195,8 +202,32 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .slider-content {
   display: flex;
-  width: 400%;
+  width: 500%;
   transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  height: 100vh;
+  max-height: 1080px;
+}
+.slider .slides {
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slider .slide1 {
+  background-image: url(../img/slider-bg.jpg);
+}
+.slider .slide2 {
+  background-image: url(../img/slide2-trees-img.jpg);
+}
+.slider .slide3 {
+  background-image: url(../img/slide3-snowflake-img.jpg);
+}
+.slider .slide4 {
+  background-image: url(../img/slide4-sakura-img.jpg);
+}
+.slider .slide5 {
+  background-image: url(../img/slide5-night-img.jpg);
 }
 .slider-img {
   object-fit: cover;
@@ -205,11 +236,16 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .slider-text-wrapper {
   position: absolute;
-  top: 381px;
-  left: 666px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  width: 37%;
+  height: 26%;
 }
 .slider-top-text {
   font-family: "Raleway";
