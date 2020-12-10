@@ -10,8 +10,9 @@
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    margin: 0 504px 0 496px;
+    margin: 0 auto;
     padding: 0;
+    width: 48%;
   }
 
   &-item {
@@ -51,5 +52,23 @@
     border: none;
     background-color: rgba(255, 255, 255, 1);
     margin: 24px 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .counters {
+    &-list {
+      width: 90%;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      margin: 0 0 20px;
+      width: 45%;
+
+      &:last-child {
+        width: 100%;
+      }
+    }
   }
 }

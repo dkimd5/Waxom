@@ -2,10 +2,10 @@
   padding: 195px 0 178px 0;
   background-image: url(../img/mobile-img.png);
   background-repeat: no-repeat;
-  background-position: bottom left 423px;
+  background-position: bottom left 22%;
 
   &-text-wrapper {
-    margin: 0 374px 0 874px;
+    margin: 0 19% 0 45%;
   }
 
   &-header {
@@ -45,5 +45,23 @@
     background-color: rgba(199, 178, 153, 1);
     border-radius: 22px;
     fill: #fff;
+  }
+}
+
+@media (max-width: 425px) {
+  .mobile {
+    padding: 50px 0;
+    background-size: 50%;
+    background-position: bottom left 10%;
+
+    &-text-wrapper {
+      margin: 0 auto;
+      text-align: center;
+      width: 90%;
+    }
+
+    &-list {
+      margin: 0 0 0 50%;
+    }
   }
 }

@@ -7,9 +7,12 @@
 
   &-text-wrapper {
     position: absolute;
-    top: 358px;
+    top: 45%;
     display: block;
-    left: 674px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30%;
   }
 
   &-header {
@@ -17,6 +20,7 @@
     font-size: 30px;
     color: rgba(255, 255, 255, 1);
     text-align: center;
+    margin: 0;
   }
 
   &-text {
@@ -25,7 +29,12 @@
     color: rgba(255, 255, 255, 1);
     text-align: center;
     line-height: 28px;
-    margin: 29px 0 0;
-    max-width: 570px;
+    margin: 20px 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .bg-video {
+    display: none;
   }
 }

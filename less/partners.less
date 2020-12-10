@@ -2,10 +2,15 @@
   background-image: url(../img/partners-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 140px 405px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 140px 0;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    margin: 0 auto;
+  }
 
   &-link {
     display: block;
@@ -13,5 +18,21 @@
 
   &-img:hover {
     transform: scale(1.1);
+  }
+}
+
+@media (max-width: 425px) {
+  .partners {
+    padding: 50px 0 20px;
+
+    &-wrapper {
+      width: 90%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-link {
+      margin: 0 0 30px;
+    }
   }
 }
