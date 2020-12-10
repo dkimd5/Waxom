@@ -1,7 +1,6 @@
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  position: relative;
 }
 
 .visually-hidden {
@@ -17,9 +16,15 @@
 
 .header {
   background-color: rgba(54, 54, 54, 1);
+  position: relative;
+
+  &-menu-toggle {
+    display: none;
+  }
 
   &-wrapper {
     display: flex;
+    justify-content: space-between;
     position: absolute;
     z-index: 1;
     padding: 40px 0 0;
@@ -69,6 +74,10 @@
     letter-spacing: -0.04em;
   }
 
+  &-nav-buttons-wrapper {
+    display: flex;
+  }
+
   &-nav {
     display: flex;
     align-items: center;
@@ -77,8 +86,8 @@
   &-list {
     display: flex;
     list-style-type: none;
-    margin: 0 0 0 219px;
     padding: 0;
+    margin: 0;
   }
 
   &-item {
@@ -254,7 +263,7 @@
   }
 
   &-header {
-    .font-mixin("Raleway", normal, 800);
+    .font-mixin("Raleway", normal, 600);
     color: rgba(255, 255, 255, 1);
     font-size: 52px;
     margin: 0 0 19px;
@@ -425,4 +434,44 @@
 }
 .slide5:checked ~ .slider-content {
   margin-left: -400%;
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding: 10px 0;
+
+    &-wrapper {
+      position: static;
+      padding: 0;
+      margin: 0;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+    }
+
+    &-logo-svg:hover {
+      transform: none;
+    }
+
+    &-nav-buttons-wrapper {
+      display: none;
+    }
+
+    &-menu-toggle {
+      display: block;
+    }
+
+    &-menu-bar {
+      display: block;
+      width: 32px;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #fff;
+      margin: 0 0 7px;
+    }
+  }
+
+  .slider {
+    display: none;
+  }
 }
