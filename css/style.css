@@ -809,10 +809,10 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   fill: #5151ca;
 }
 .projects .link {
-  left: 145px;
+  left: 40%;
 }
 .projects .search {
-  right: 145px;
+  right: 40%;
 }
 .projects-more-button {
   margin: 40px 0 0;
@@ -1468,7 +1468,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   }
   .footer-copyright-text {
     width: 50%;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 18%;
   }
   .footer-divide-line:after {
     display: none;
