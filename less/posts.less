@@ -25,17 +25,13 @@
     margin: 40px auto 0;
     padding: 0;
     display: flex;
-    width: 67%;
+    max-width: 1170px;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   &-item {
     width: 370px;
-
-    &:last-child {
-      margin: 0;
-    }
 
     &:hover img {
       filter: brightness(50%);
@@ -57,6 +53,7 @@
   &-img {
     display: block;
     width: 100%;
+    object-fit: cover;
   }
 
   &-text-wrapper {
@@ -128,6 +125,20 @@
 
   &-button-svg {
     fill: rgba(209, 209, 209, 1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .posts-text {
+    width: 60%;
+  }
+
+  .posts-list {
+    justify-content: space-evenly;
+  }
+
+  .posts-item {
+    margin: 20px 0 0;
   }
 }
 

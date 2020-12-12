@@ -33,7 +33,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    width: 61%;
+    width: 66%;
     height: 5%;
   }
 
@@ -76,26 +76,26 @@
 
   &-nav-buttons-wrapper {
     display: flex;
+    // width: 58%;
   }
 
   &-nav {
     display: flex;
     align-items: center;
+    // width: 83%;
   }
 
   &-list {
     display: flex;
     list-style-type: none;
+    justify-content: space-between;
+    // width: 100%;
     padding: 0;
     margin: 0;
   }
 
   &-item {
-    margin: 0 30px 0 0;
-
-    &:last-child {
-      margin: 0;
-    }
+    padding: 0 0 0 23px;
   }
 
   &-link {
@@ -117,7 +117,7 @@
   &-shop {
     display: flex;
     align-items: center;
-    margin: 0 0 0 63px;
+    margin: 0 0 0 54px;
     fill: rgba(255, 255, 255, 1);
   }
 
@@ -132,8 +132,17 @@
   &-search {
     display: flex;
     align-items: center;
-    margin: 0 0 0 28px;
+    margin: 0 0 0 30px;
     position: relative;
+  }
+
+  &-menu-bar {
+    display: block;
+    width: 32px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 0 0 7px;
   }
 
   input[type="search"] {
@@ -436,6 +445,26 @@
   margin-left: -400%;
 }
 
+@media (max-width: 1024px) {
+  .header-wrapper {
+    width: 90%;
+  }
+
+  .slider-text-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav-buttons-wrapper {
+    display: none;
+  }
+
+  .header-menu-toggle {
+    display: block;
+  }
+}
+
 @media (max-width: 425px) {
   .header {
     padding: 10px 0;
@@ -451,23 +480,6 @@
 
     &-logo-svg:hover {
       transform: none;
-    }
-
-    &-nav-buttons-wrapper {
-      display: none;
-    }
-
-    &-menu-toggle {
-      display: block;
-    }
-
-    &-menu-bar {
-      display: block;
-      width: 32px;
-      height: 4px;
-      border-radius: 4px;
-      background-color: #fff;
-      margin: 0 0 7px;
     }
   }
 

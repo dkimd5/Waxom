@@ -6,7 +6,7 @@
 
   &-list {
     margin: 0 auto;
-    width: 61%;
+    max-width: 1248px;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -14,7 +14,7 @@
   }
 
   &-item {
-    width: 23%;
+    max-width: 270px;
   }
 
   .top-padding {
@@ -203,10 +203,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 268px;
   }
 
   &-widget-item {
-    margin: 0 0 10px;
+    margin: 0 0 9px;
   }
 
   &-widget-link:hover img {
@@ -218,10 +219,15 @@
   }
 
   &-copyrights {
-    padding: 45px 374px;
+    padding: 45px 0;
     background-color: rgba(17, 17, 17, 1);
+  }
+
+  &-copyrights-wrp {
     display: flex;
     justify-content: space-between;
+    max-width: 1248px;
+    margin: 0 auto;
   }
 
   &-copyrights a {
@@ -252,10 +258,13 @@
     &:after {
       content: "";
       width: 1px;
-      height: 100%;
+      height: 16px;
       position: absolute;
       background-color: rgba(37, 37, 37, 1);
       right: -10px;
+      bottom: 0;
+      top: 0;
+      margin: auto 0;
     }
   }
 
@@ -272,6 +281,31 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .footer-list {
+    width: 60%;
+    flex-wrap: wrap;
+  }
+
+  .footer-copyrights-wrp {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-list {
+    width: 80%;
+  }
+
+  .footer-copyrights-wrp {
+    display: block;
+  }
+
+  .footer-copyright-right-block {
+    margin: 20px 0 0;
+  }
+}
+
 @media (max-width: 425px) {
   .footer {
     &-main-block {
@@ -279,14 +313,10 @@
     }
 
     &-list {
-      width: 90%;
       display: block;
     }
 
-    &-item {
-      width: 100%;
-    }
-
+    &-item,
     &-logo {
       margin: 0 auto;
     }
@@ -298,37 +328,15 @@
     &-column-header {
       display: none;
     }
+  }
 
-    &-item:nth-child(4) {
-      width: 70%;
-      margin: 0 auto;
-    }
+  .footer-copyright-left-block {
+    align-items: center;
+  }
+}
 
-    &-widget-list {
-      margin: 0;
-      justify-content: space-between;
-    }
-
-    &-copyrights {
-      display: block;
-      padding: 30px 0;
-    }
-
-    &-copyright-left-block {
-      display: block;
-    }
-
-    &-copyright-text {
-      width: 50%;
-      margin: 0 0 0 18%;
-    }
-
-    &-divide-line:after {
-      display: none;
-    }
-
-    &-copyright-right-block {
-      display: block;
-    }
+@media (max-width: 320px) {
+  .footer-widget-list {
+    justify-content: center;
   }
 }
