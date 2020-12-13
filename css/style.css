@@ -1240,6 +1240,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .partners-img:hover {
   transform: scale(1.1);
+  transition: 0.3s;
 }
 @media (max-width: 1024px) {
   .partners-wrapper {
@@ -1308,7 +1309,6 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .footer-logo-svg {
   fill: #ffffff;
-  transition: 1s;
 }
 .footer-logo-txt {
   font-family: "Raleway";
@@ -1318,7 +1318,6 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   color: #ffffff;
   text-align: right;
   letter-spacing: -0.04em;
-  transition: 1s;
 }
 .footer-text {
   font-family: "Montserrat";
