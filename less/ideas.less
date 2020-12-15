@@ -17,18 +17,20 @@
     text-align: center;
     line-height: 28px;
     margin: 24px auto 0;
-    width: 40.6%;
+    width: 41%;
   }
 
-  &-multi-bg {
-    margin: 40px auto 0;
+  &-windows-img {
+    display: block;
     width: 64%;
-    min-height: 482px;
-    background-image: url(../img/ideas-center.jpg), url(../img/ideas-left.jpg),
-      url(../img/ideas-right.jpg);
-    min-width: 1204px;
-    background-repeat: no-repeat;
-    background-position: bottom center, bottom left, bottom right;
+    object-fit: contain;
+    margin: 40px auto 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ideas-windows-img {
+    width: 90%;
   }
 }
 
@@ -45,7 +47,7 @@
       width: 90%;
     }
 
-    &-multi-bg {
+    &-windows-img {
       display: none;
     }
   }

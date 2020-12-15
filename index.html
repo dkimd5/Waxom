@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="body">
     <div class="container">
         <header class="header">
             <h1 class="visually-hidden">Waxon design company</h1>
@@ -62,10 +62,25 @@
                         </label>
                     </form>
                 </div>
-                <div class="header-menu-toggle">
-                    <span class="header-menu-bar"></span>
-                    <span class="header-menu-bar"></span>
-                    <span class="header-menu-bar"></span>
+                <input type="checkbox" id="header-burger-checkbox" class="visually-hidden" checked>
+                <label for="header-burger-checkbox" class="header-burger-label">
+                    <div class="header-burger-icon">
+                        <span class="header-menu-bar"></span>
+                        <span class="header-menu-bar"></span>
+                        <span class="header-menu-bar"></span>
+                    </div>
+                </label>
+                <div class="header-burger-menu">
+                    <ul class="header-burger-list">
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Home</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">About&nbsp;Us</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Portfolio</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Features</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Blog</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Pricing</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Shortcodes</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Contact</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="slider">
@@ -206,7 +221,7 @@
             <section class="ideas">
                 <h2 class="ideas-header">Waxom is Realization of your Ideas.</h2>
                 <p class="ideas-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
-                <div class="ideas-multi-bg"></div>
+                <img class="ideas-windows-img" src="img/ideas-windows-img.png" alt="windows-img">
             </section>
             <aside class="aside">
                 <div class="aside-wrapper">
@@ -406,7 +421,7 @@
                 <button class="projects-more-button">load more</button>
             </section>
             <section class="bg-video">
-                <video class="bg-video-item" src="video/bg-video.mp4" width="100%" height="705" autoplay loop muted></video>
+                <video class="bg-video-item" src="video/bg-video.mp4" width="1920" height="1024" autoplay loop muted></video>
                 <div class="bg-video-text-wrapper">
                     <h2 class="bg-video-header">Waxom Video Presentation</h2>
                     <p class="bg-video-text">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.</p>
@@ -677,15 +692,17 @@
             </ul>
         </div>
         <div class="footer-copyrights">
-            <div class="footer-copyright-left-block">
-                <span class="footer-copyright-text footer-divide-line">Copyright © 2015 <a href="index.html" class="footer-brand-link">Waxom</a></span>
-                <a href="#" class="footer-copyright-text footer-brand-link footer-divide-line">Privacy Policy</a>
-                <a href="#" class="footer-copyright-text footer-brand-link footer-divide-line">FAQ</a>
-                <a href="#" class="footer-copyright-text footer-brand-link">Support</a>
-            </div>
-            <div class="footer-copyright-right-block">
-                <span class="footer-copyright-text footer-divide-line">Designed by <a href="#" class="footer-brand-link">ThemeFire</a></span>
-                <span class="footer-copyright-text">Only on <a href="#" class="footer-brand-link">Envato Market</a></span>
+            <div class="footer-copyrights-wrp">
+                <div class="footer-copyright-left-block">
+                    <span class="footer-copyright-text footer-divide-line">Copyright © 2015 <a href="index.html" class="footer-brand-link">Waxom</a></span>
+                    <a href="#" class="footer-copyright-text footer-brand-link footer-divide-line">Privacy Policy</a>
+                    <a href="#" class="footer-copyright-text footer-brand-link footer-divide-line">FAQ</a>
+                    <a href="#" class="footer-copyright-text footer-brand-link">Support</a>
+                </div>
+                <div class="footer-copyright-right-block">
+                    <span class="footer-copyright-text footer-divide-line">Designed by <a href="#" class="footer-brand-link">ThemeFire</a></span>
+                    <span class="footer-copyright-text">Only on <a href="#" class="footer-brand-link">Envato Market</a></span>
+                </div>
             </div>
         </div>
     </footer>

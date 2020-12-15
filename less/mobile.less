@@ -48,11 +48,35 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .mobile {
+    background-position: bottom left 10%;
+  }
+
+  .mobile-text-wrapper {
+    margin: 0 10% 0 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    background-size: 35%;
+    padding: 100px 0 178px 0;
+  }
+
+  .mobile-text-wrapper {
+    margin: 0 5% 0;
+  }
+
+  .mobile-list {
+    margin: 26px 0 0 50%;
+  }
+}
+
 @media (max-width: 425px) {
   .mobile {
     padding: 50px 0;
-    background-size: 50%;
-    background-position: bottom left 10%;
+    background-image: none;
 
     &-text-wrapper {
       margin: 0 auto;
@@ -60,8 +84,8 @@
       width: 90%;
     }
 
-    &-list {
-      margin: 0 0 0 50%;
+    .mobile-list {
+      margin: 20px 20% 0;
     }
   }
 }
