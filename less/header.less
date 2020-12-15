@@ -18,7 +18,7 @@
   background-color: rgba(54, 54, 54, 1);
   position: relative;
 
-  &-burger-icon,
+  &-menu-bar,
   &-burger-menu {
     display: none;
   }
@@ -34,7 +34,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    width: 66%;
+    max-width: 1275px;
     height: 5%;
   }
 
@@ -77,20 +77,17 @@
 
   &-nav-buttons-wrapper {
     display: flex;
-    // width: 58%;
   }
 
   &-nav {
     display: flex;
     align-items: center;
-    // width: 83%;
   }
 
   &-list {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-    // width: 100%;
     padding: 0;
     margin: 0;
   }
@@ -138,7 +135,6 @@
   }
 
   &-menu-bar {
-    display: block;
     width: 32px;
     height: 4px;
     border-radius: 4px;
@@ -454,9 +450,7 @@
   .slider-text-wrapper {
     width: 50%;
   }
-}
 
-@media (max-width: 768px) {
   .container {
     overflow: hidden;
   }
@@ -469,7 +463,7 @@
     z-index: 2;
   }
 
-  .header-burger-icon {
+  .header-menu-bar {
     display: block;
   }
 
@@ -506,6 +500,57 @@
     right: -100%;
   }
 }
+
+// @media (max-width: 768px) {
+//   .container {
+//     overflow: hidden;
+//   }
+
+//   .header-nav-buttons-wrapper {
+//     display: none;
+//   }
+
+//   .header-burger-label {
+//     z-index: 2;
+//   }
+
+//   .header-menu-bar {
+//     display: block;
+//   }
+
+//   .header-burger-menu {
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     right: -38px;
+//     height: 100vh;
+//     width: 40vw;
+//     box-sizing: border-box;
+//     background: linear-gradient(to right, #606c88, #3f4c6b);
+//     padding: 100px 0 0;
+//     transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+//     z-index: 1;
+//   }
+
+//   .header-burger-list {
+//     list-style-type: none;
+//   }
+
+//   .header-burger-item {
+//     padding-bottom: 30px;
+//     .font-mixin("Raleway", normal, 500);
+//     font-size: 30px;
+//   }
+
+//   .header-burger-link {
+//     text-decoration: none;
+//     color: #fff;
+//   }
+
+//   input[type="checkbox"]:checked ~ .header-burger-menu {
+//     right: -100%;
+//   }
+// }
 
 @media (max-width: 425px) {
   .container {
