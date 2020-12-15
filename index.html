@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="body">
     <div class="container">
         <header class="header">
             <h1 class="visually-hidden">Waxon design company</h1>
@@ -62,10 +62,25 @@
                         </label>
                     </form>
                 </div>
-                <div class="header-menu-toggle">
-                    <span class="header-menu-bar"></span>
-                    <span class="header-menu-bar"></span>
-                    <span class="header-menu-bar"></span>
+                <input type="checkbox" id="header-burger-checkbox" class="visually-hidden" checked>
+                <label for="header-burger-checkbox" class="header-burger-label">
+                    <div class="header-burger-icon">
+                        <span class="header-menu-bar"></span>
+                        <span class="header-menu-bar"></span>
+                        <span class="header-menu-bar"></span>
+                    </div>
+                </label>
+                <div class="header-burger-menu">
+                    <ul class="header-burger-list">
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Home</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">About&nbsp;Us</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Portfolio</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Features</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Blog</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Pricing</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Shortcodes</a></li>
+                        <li class="header-burger-item"><a href="#" class="header-burger-link">Contact</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="slider">
