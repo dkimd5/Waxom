@@ -61,13 +61,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  .counters-list {
+    flex-wrap: wrap;
+  }
+
+  .counters-item {
+    width: 50%;
+
+    &:last-child {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 425px) {
   .counters {
-    &-list {
-      width: 90%;
-      flex-wrap: wrap;
-    }
-
     &-item {
       margin: 0 0 20px;
       width: 45%;

@@ -1130,11 +1130,18 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
     width: 90%;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .counters-list {
-    width: 90%;
     flex-wrap: wrap;
   }
+  .counters-item {
+    width: 50%;
+  }
+  .counters-item:last-child {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
   .counters-item {
     margin: 0 0 20px;
     width: 45%;
