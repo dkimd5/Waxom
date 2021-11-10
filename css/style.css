@@ -768,17 +768,17 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   margin: 24px auto 0;
   width: 41%;
 }
-.projects-list-one {
+.projects-list-categories {
   list-style-type: none;
   margin: 40px 0 0 0;
   display: flex;
   justify-content: center;
   padding: 0;
 }
-.projects-list-one-item {
+.projects-list-categories-item {
   margin: 0 10px 0 0;
 }
-.projects-list-one-item:last-child {
+.projects-list-categories-item:last-child {
   margin: 0;
 }
 .projects-list-button {
@@ -804,7 +804,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 .projects-list-button:focus {
   outline: 0px;
 }
-.projects-list-two {
+.projects-list-cards {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -813,26 +813,26 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   max-width: 1170px;
   justify-content: space-between;
 }
-.projects-list-two-item {
+.projects-list-cards-item {
   margin: 0 0 30px 0;
   position: relative;
 }
-.projects-list-two-item:hover img {
+.projects-list-cards-item:hover img {
   filter: brightness(50%);
 }
-.projects-list-two-item:hover .projects-text-wrapper {
+.projects-list-cards-item:hover .projects-text-wrapper {
   background-color: #362f2d;
 }
-.projects-list-two-item:hover h3 {
+.projects-list-cards-item:hover h3 {
   color: #ffffff;
 }
-.projects-list-two-item:hover p {
+.projects-list-cards-item:hover p {
   color: #c7b299;
 }
-.projects-list-two-item:hover .projects-text-wrapper::before {
+.projects-list-cards-item:hover .projects-text-wrapper::before {
   border-bottom: 10px solid #362f2d;
 }
-.projects-list-two-item:hover .projects-button {
+.projects-list-cards-item:hover .projects-button {
   display: block;
   fill: #fff;
 }
@@ -918,7 +918,7 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: lightgrey;
 }
 @media (max-width: 1024px) {
-  .projects-list-two {
+  .projects-list-cards {
     justify-content: space-evenly;
   }
 }
@@ -929,14 +929,14 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   .projects-text {
     width: 90%;
   }
-  .projects-list-one {
+  .projects-list-categories {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .projects-list-one-item {
+  .projects-list-categories-item {
     margin: 0 0 10px;
   }
-  .projects-list-two {
+  .projects-list-cards {
     width: 90%;
     justify-content: center;
   }
