@@ -1317,6 +1317,15 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 @media (max-width: 1024px) {
   .partners-wrapper {
     width: 90%;
+    flex-wrap: wrap;
+  }
+  .partners-link {
+    width: 50%;
+    margin-top: 30px;
+  }
+  .partners-img {
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (max-width: 768px) {
@@ -1327,18 +1336,19 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
     width: 70%;
     flex-wrap: wrap;
   }
+}
+@media (max-width: 600px) {
+  .partners-wrapper {
+    width: 100%;
+  }
   .partners-link {
-    margin: 20px 0 0;
+    width: 100%;
+    margin: 40px 0 0;
   }
 }
 @media (max-width: 425px) {
   .partners {
     padding: 10px 0 50px;
-  }
-  .partners-wrapper {
-    width: 90%;
-    flex-wrap: wrap;
-    justify-content: center;
   }
   .partners-link {
     margin: 40px 0 0;
