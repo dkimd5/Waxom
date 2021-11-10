@@ -770,16 +770,14 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
 }
 .projects-list-categories {
   list-style-type: none;
-  margin: 40px 0 0 0;
+  margin: 40px auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0;
+  max-width: 50%;
 }
 .projects-list-categories-item {
   margin: 0 10px 0 0;
-}
-.projects-list-categories-item:last-child {
-  margin: 0;
 }
 .projects-list-button {
   font-family: "Montserrat";
@@ -918,8 +916,20 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
   background-color: lightgrey;
 }
 @media (max-width: 1024px) {
+  .projects-list-categories {
+    max-width: 70%;
+  }
   .projects-list-cards {
     justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .projects-list-categories {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .projects-list-categories-item {
+    margin: 5px 0 0 0;
   }
 }
 @media (max-width: 425px) {
