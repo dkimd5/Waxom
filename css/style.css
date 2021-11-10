@@ -604,6 +604,14 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
     width: 90%;
   }
 }
+@media (max-width: 768px) {
+  .sections-list {
+    flex-wrap: wrap;
+  }
+  .sections-item {
+    width: 45%;
+  }
+}
 @media (max-width: 425px) {
   .sections {
     padding: 50px;
@@ -614,7 +622,6 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
     justify-content: space-around;
   }
   .sections-item {
-    width: 45%;
     margin: 0 0 40px;
   }
 }
@@ -1611,4 +1618,3 @@ input[type="search"]:focus ~ .header-search-label > .header-search-svg {
     justify-content: center;
   }
 }
-/*# sourceMappingURL=style.css.map */
